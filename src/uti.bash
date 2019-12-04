@@ -23,5 +23,5 @@ for arg in "$@"; do
     fi
 done
 
-mdls -name kMDItemContentType $@ |
+mdls -name kMDItemContentType "$@" |
     sed -E 's/kMDItemContentType = "(.+)"/\1/'
