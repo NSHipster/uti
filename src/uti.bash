@@ -17,7 +17,7 @@ if [[ $# -eq 0 ]]; then
 fi
 
 for arg in "$@"; do
-    if ! ([ -f "$arg" ] || [ -d "$arg" ]); then
+    if ! { [ -f "$arg" ] || [ -d "$arg" ]; }; then
         echo "error: $arg is not a file or directory" >&2
         exit 1
     fi
