@@ -11,6 +11,17 @@ uti: $(srcdir)/uti.bash
 	@cp $< $@
 	@chmod +x $@
 
+.PHONY: check
+check: uti
+	@set -e ; \
+	EXPECTED="public.data"; \
+	ACTUAL=$$(uti Makefile); \
+	if [ "$$EXPECTED" != "$$ACTUAL" ]; then \
+		echo "Expected: \"$$EXPECTED\"";\
+		echo "Actual: \"$$ACTUAL\""; \
+		exit 1; \
+	fi
+
 .PHONY: install
 install: uti
 	@install -d "$(bindir)"
