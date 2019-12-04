@@ -49,9 +49,9 @@ com.apple.xip-archive
 com.apple.application-bundle
 ```
 
-### Installation
+## Installation
 
-#### Homebrew
+### Homebrew
 
 Run the following command to install using [homebrew](https://brew.sh/):
 
@@ -59,7 +59,7 @@ Run the following command to install using [homebrew](https://brew.sh/):
 $ brew install nshipster/formulae/uti
 ```
 
-#### Manually
+### Manually
 
 Run the following commands to build and install manually:
 
